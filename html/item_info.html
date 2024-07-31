@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/header.css" />
+    <link rel="stylesheet" href="./../css/info.css" />
+    <script defer src="./../js/header.js"></script>
+  </head>
+  <body onload="init()">
+    <header>
+      <div id="header_wrap">
+          <div id="first_wrap">
+              <!-- 로고 이미지 부분 -->
+              <img src="./../images/logo.png" id="logo">
+          </div>
+          <div id="second_wrap">
+              <!-- 검색창 -->
+              <div id="search_wrap">
+                  <input type="text" id="search" placeholder="찾으시는 상품이 있으신가요? 모두 검색">
+                  <img src="./../images/search.svg" id="search_img">
+              </div>
+          </div>
+          <div id="third_wrap">
+              <img src="./../images/person.svg" id="profile">
+              <p id="profile_text">MyPage</p>
+          </div>
+      </div>
+    </header>
+    <main>
+      <div class="main1">
+        <img src="" id="content_img" />
+        <ul class="info_detail">
+          <li id="title"></li>
+          <li id="category"><a href=""></a></li>
+          <li id="price"></li>
+          <li id="content"></li>
+        </ul>
+      </div>
+      <div class="main2">
+        <button onclick="setInfo()">거래하기</button>
+        <button onclick="getInfo()">채팅하기</button>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <script>
+    let title = document.getElementById("title");
+    let category = document.getElementById("category");
+    let price = document.getElementById("price");
+    let content = document.getElementById("content");
+    let image = document.getElementById("content_img");
+
+    function init() {
+      getInfo();
+    }
+
+    function getInfo() {
+      let item = localStorage.getItem("item_list");
+      let result = JSON.parse(item);
+      result.forEach(function (item, i) {
+        if (result[i].isClicked) {
+          //클릭이 된 데이터를 확인 true인 게시글을 찾아서 로드
+          title.innerHTML = result[i].title;
+          category.innerHTML = result[i].category;
+          price.innerHTML = result[i].price;
+          content.innerHTML = result[i].content;
+          image.setAttribute("src", result[i].image);
+          result[i].isClicked = false; //데이터 호출 후 isClicked 초기화
+          localStorage.setItem("item_list", JSON.stringify(result)); //초기화한 배열 저장
+        }
+      });
+    }
+
+  </script>
+</html>

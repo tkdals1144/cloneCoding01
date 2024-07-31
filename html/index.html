@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/header.css" />
+    <link rel="stylesheet" href="./../css/font.css" />
+    <link rel="stylesheet" href="./../css/main.css" />
+    <link rel="stylesheet" href="./../css/footer.css" />
+    <script defer src="./../js/banner.js"></script>
+    <script defer src="./../js/contents.js"></script>
+    <script defer src="./../js/header.js"></script>
+  </head>
+  <body onload="loadProducts()">
+    <!-- 내부요소값 max-width 1160px -->
+    <header>
+      <div id="header_wrap">
+          <div id="first_wrap">
+              <!-- 로고 이미지 부분 -->
+              <img src="./../images/logo.png" id="logo">
+              
+              <!-- 카테고리 버튼 -->
+              <div id="category_wrap">
+                  <img src="./../images/menu.svg" id="category_img">
+                  <p id="category_text">카테고리</p>
+                  <!-- 카테고리 드롭다운메뉴 -->
+                  <div id="dropdown">
+                      <ul>
+                          <li class="dropdown_list">추천상품</li>
+                          <li class="dropdown_list">전자제품</li>
+                          <li class="dropdown_list">가구</li>
+                          <li class="dropdown_list">의류</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div id="second_wrap">
+              <!-- 검색창 -->
+              <div id="search_wrap">
+                  <input type="text" id="search" placeholder="찾으시는 상품이 있으신가요? 모두 검색">
+                  <img src="./../images/search.svg" id="search_img">
+              </div>
+
+              <!-- .search_list p 랜덤으로 줄 예정 -->
+              <div id="search_list_wrap">
+                  <div id="left">&lt</div>
+                  <ul id="search_list_ul">
+                      <!-- <li class="search_list"><b>1.</b><p>갤럭시 산곡역</p></li>
+                      <li class="search_list"><b>2.</b><p>갤럭시 산곡역</p></li>
+                      <li class="search_list"><b></b><p>갤럭시 산곡역</p></li>
+                      <li class="search_list"><b></b><p>갤럭시 산곡역</p></li>
+                      <li class="search_list"><b></b><p>갤럭시 산곡역</p></li> -->
+                  </ul>
+                  <div id="right">&gt</div>
+              </div>
+          </div>
+          <div id="third_wrap">
+              <img src="./../images/person.svg" id="profile">
+              <p id="profile_text">MyPage</p>
+          </div>
+      </div>
+    </header>
+    <!-- main max-width 1140px -->
+    <main>
+      <div id="main_wrap">
+        <div id="slide_wrap">
+          <img src="./../images/prev.svg" id="prev" />
+          <img src="./../images/next.svg" id="next" />
+          <ul id="slide">
+            <!-- 처음 3개와 끝 3개를 같게 하고 마지막 요소에 닿을시 즉시 첫 부분으로 순환 -->
+            <!-- 조금 더 늘릴예정 -->
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1719542914020.webp"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">인터넷+TV+유심</h2>
+                <h2 class="slide_h_type2">결합하면 95만원</h2>
+                <h3 class="slide_h_type3">지금만 가능한 통 큰 혜택</h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1720417363435.webp"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">보험료 낮춰주는</h2>
+                <h2 class="slide_h_type2">4세대 실비 어떄?</h2>
+                <h3 class="slide_h_type3">#보험료 상승 주범 "실손"</h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1721283772027.png"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">중고나라 J쿠폰</h2>
+                <h2 class="slide_h_type2">쉽고, 빠른 쿠폰거래</h2>
+                <h3 class="slide_h_type3">J쿠폰 바로 가기 ></h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1721283722405.png"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">중고나라가 알려주는</h2>
+                <h2 class="slide_h_type2">사기 예방 tip!</h2>
+                <h3 class="slide_h_type3">주요 사기 패턴 확인하기 ></h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1721283592629.png"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">첫 결제</h2>
+                <h2 class="slide_h_type2">수수료 무료!</h2>
+                <h3 class="slide_h_type3">할인 받으러 가기 ></h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1719542914020.webp"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">인터넷+TV+유심</h2>
+                <h2 class="slide_h_type2">결합하면 95만원</h2>
+                <h3 class="slide_h_type3">지금만 가능한 통 큰 혜택</h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1720417363435.webp"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">보험료 낮춰주는</h2>
+                <h2 class="slide_h_type2">4세대 실비 어떄?</h2>
+                <h3 class="slide_h_type3">#보험료 상승 주범 "실손"</h3>
+              </div>
+            </li>
+            <li class="slide_item">
+              <img
+                src="https://img2.joongna.com/banner/1721283772027.png"
+                alt=""
+              />
+              <div class="slide_item_box">
+                <h2 class="slide_h_type1">중고나라 J쿠폰</h2>
+                <h2 class="slide_h_type2">쉽고, 빠른 쿠폰거래</h2>
+                <h3 class="slide_h_type3">J쿠폰 바로 가기 ></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="order_box_wrap">
+          <ul id="order_box">
+            <li class="order"></li>
+            <li class="order"></li>
+            <li class="order"></li>
+            <li class="order"></li>
+            <li class="order"></li>
+            <li class="order"></li>
+          </ul>
+        </div>
+        <div class="content_box_wrap" id="content_box1_wrap">
+          <div class="content_prev_wrap" id="prev1">
+            <img src="./../images/prev.svg" class="content_prev" />
+          </div>
+          <div class="content_next_wrap" id="next1">
+            <img src="./../images/next.svg" class="content_next" />
+          </div>
+          <h1>당신을 위한 추천상품!</h1>
+          <ul id="box1_wrap" class="content_box">
+            <!-- <li class="box1">
+                        <img src="" class="box_img">
+                        <p class="box_name"></p>
+                        <p class="box_price"></p>
+                    </li> -->
+          </ul>
+        </div>
+        <div class="content_box_wrap" id="content_box2_wrap">
+          <div class="content_prev_wrap" id="prev2">
+            <img src="./../images/prev.svg" class="content_prev" />
+          </div>
+          <div class="content_next_wrap" id="next2">
+            <img src="./../images/next.svg" class="content_next" />
+          </div>
+          <h1>딱 맞는 전자제품!</h1>
+          <ul id="box2_wrap" class="content_box">
+            <!-- <li class="box2">
+                        <img src="" class="box_img">
+                        <p class="box_name"></p>
+                        <p class="box_price"></p>
+                    </li> -->
+          </ul>
+        </div>
+        <div class="content_box_wrap" id="content_box3_wrap">
+          <div class="content_prev_wrap" id="prev3">
+            <img src="./../images/prev.svg" class="content_prev" />
+          </div>
+          <div class="content_next_wrap" id="next3">
+            <img src="./../images/next.svg" class="content_next" />
+          </div>
+          <h1>최고의 선택! 가구 아이템!</h1>
+          <ul id="box3_wrap" class="content_box">
+            <!-- <li class="box3">
+                        <img src="" class="box_img">
+                        <p class="box_name"></p>
+                        <p class="box_price"></p>
+                    </li> -->
+          </ul>
+        </div>
+        <div class="content_box_wrap" id="content_box4_wrap">
+          <div class="content_prev_wrap" id="prev4">
+            <img src="./../images/prev.svg" class="content_prev" />
+          </div>
+          <div class="content_next_wrap" id="next4">
+            <img src="./../images/next.svg" class="content_next" />
+          </div>
+          <h1>내몸에 맞는 최고의 의류</h1>
+          <ul id="box4_wrap" class="content_box">
+            <!-- <li class="box4">
+                        <img src="" class="box_img">
+                        <p class="box_name"></p>
+                        <p class="box_price"></p>
+                    </li> -->
+          </ul>
+        </div>
+        <div id="main_bottom">
+          <img src="./../images/logo.png" alt="" id="bottom_logo">
+          <p id="bottom_text">앱을 활용하여 더 쉽고 빠르게 거래해보세요!</p>
+          <div id="bottom_btn_wrap">
+              <img class="bottom_btn" src="./../images/app1.webp">
+              <img class="bottom_btn" src="./../images/app2.webp">
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="info_wrap">
+          <ul id="icon_wrap">
+              <li class="icon" id="icon1"><img src="./../images/icon1.svg"></li>
+              <li class="icon" id="icon2"><img src="./../images/icon2.svg"></li>
+              <li class="icon" id="icon3"><img src="./../images/icon3.png"></li>
+              <li class="icon" id="icon4"><img src="./../images/icon4.svg"></li>
+              <li class="icon" id="icon5"><img src="./../images/icon5.svg"></li>
+          </ul>
+          <p id="info_title">(주)로고 사업자 정보</p>
+          <ul id="info_contents">
+              <li class="info">(주)로고 <hr class="aplomb"> 대표자 : 최인욱</li>
+              <li class="info">사업자 등록번호 : 215-87-87482</li>
+              <li class="info">통신판매신고번호 : 제2019-서울서초-0097호</li>
+              <li class="info">주소 : 서울특별시 서초구 서초대로 301 동익성봉빌딩 7층</li>
+              <li class="info">대표번호 : 1533-7861</li>
+              <li class="info">메일 : logo@logo.co.kr</li>
+              <li class="info">호스팅제공자 : 아마존웹서비스</li>
+              <li class="info"><p>Contact</p> <a href="#">로고 셀러 회원 신청</a> <hr class="aplomb"><a href="#">로고 광고 문의</a></li>
+          </ul>
+          <hr id="hr1">
+          <div id="footer_bottom">
+              <div id="bottom_left">
+                  <ul id="bottom_anchor">
+                      <li class="anchor">이용약관  <hr class="aplomb"> </li>
+                      <li class="anchor" id="important">개인정보처리방침  <hr class="aplomb"></li>
+                      <li class="anchor">분쟁처리절차  <hr class="aplomb"></li>
+                      <li class="anchor">청소년보호정책  <hr class="aplomb"></li>
+                      <li class="anchor">사업자정보확인  <hr class="aplomb"></li>
+                      <li class="anchor">게시글 수집 및 이용 안내  <hr class="aplomb"></li>
+                      <li class="anchor">로고 고객센터</li>
+                  </ul>
+                  <p id="bottom_p">
+                      "로고" 상점의 판매상품을 제외한 모든 상품들에 대하여, (주)로고는 통신판매중개자로서 거래 당사자가 
+                      아니며 판매 회원과 구매 회원 간의 상품거래 정보 및 거래에 관여하지 않고, 어떠한 의무와 책임도
+                      부담하지 않습니다.
+                  </p>
+              </div>
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>
